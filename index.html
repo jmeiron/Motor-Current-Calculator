@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html lang= 'en'>
 <header>
-    <title>Calculator</title>
+    <title>Motor Current Calculator</title>
 </header>
 <link rel = 'stylesheet' href="styles.css">
-<script src='main.js'></script>
-<body>   
-  <h1>Motor Current Calculator</h1>
-<form>
-    <label for='voltage'>Voltage</label>
-    <input type='number' maxlength="4" minlength="1" required>
-    <br>
-    <label for='phase'>Phase</label>
-    <select>
-        <option value="3 Phase">3 Phase</option>
-        <option value="1 Phase">1 Phase</option>
-    </select>
-    <br>
-    <label for='Motor Power'>Motor Power Rating</label>
-    <input type='number' maxlength="3" minlength="1" required>
-    <select>
-        <option value="kW">kW</option>
-        <option value="hp">hp</option>
-    </select>
-    <br>
-    <label for='Motor Power Factor'>Motor PowerFactor</label>
-    <input type='number' minlength="1" maxlength="3">
-    <br>
-    <label for='Motor eff '>Motor Efficiency</label>
-    <input type='number' minlength="1" minlength="3">
-    <br>
-    
-</form>
-</body>
+
+  <body>
+    <div class="title">
+        <h1>Motor Current Calculator</h1>
+    </div>  
+    <div class='voltage input'>
+       <label>Voltage</label>
+       <input id='voltage'type='number' maxlength="4" minlength="1" value="120" required> 
+    </div>     
+    <div class="phase input">
+      <label>Phase</label>
+        <select id="phase">
+          <option value="3 Phase">3 Phase</option>
+          <option value="1 Phase">1 Phase</option>
+        </select>
+    </div>
+    <div class="MotorP input">
+       <label>Motor Power Rating</label>
+       <input id="motorPR" type='number' maxlength="3" minlength="1" value="100" required>
+       <select id="type">
+         <option value="kW">kW</option>
+         <option value="hp">hp</option>
+       </select> 
+    </div>   
+    <div class="MotorPF input">
+      <label>Motor Power Factor</label>
+      <input id="motorPF" type='number' minlength="1" maxlength="3" value="0.86">
+    </div>  
+    <div class="MotorEff input">
+      <label>Motor Efficiency</label>
+      <input id="motorE" type='number' minlength="1" minlength="3" value="0.95">
+    </div>  
+    <div class="button">
+      <button id="calculate">
+        Calculate
+      </button>
+    </div>
+    <div class="MotorCurrent OutPut">
+      <h2 id='motorOutput'>Motor Current = </h2>
+    </div>
+
+
+    <script src="main.js"></script> 
+  </body>
 </html>
