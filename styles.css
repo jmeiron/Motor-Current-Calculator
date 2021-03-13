@@ -1,16 +1,36 @@
 html {
     background-color: cadetblue;
     font-family: Arial, Helvetica, sans-serif;
+}
+.title{
     display: flex;
     justify-content: center;
 }
-form{
-   font-size: 24px;
-   margin-top:32px ;
-}
 .button{
-    margin-left: 60px;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
 }
-form button input {
-    background-color: yellow;
+.inputs{
+display: flex;
+justify-content: center;
+margin-top: 5%; 
+font-weight: 750;   
+}
+.MCP{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+.voltage-input{
+    margin-right: 2%;
+}
+.phase-input{
+    margin-right: 2%;
+}
+.MPI{
+    margin-right: 2%;
+}
+.MPFI{
+    margin-right: 2%;
 }

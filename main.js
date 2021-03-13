@@ -10,7 +10,7 @@ let motorOutput =document.getElementById('motorOutput');
 
 
 function changeColor() {
-    button.style.backgroundColor = 'red';
+    button.style.backgroundColor = 'grey';
 }
 function returnColor() {
     button.style.backgroundColor = '';
@@ -27,15 +27,25 @@ button.addEventListener('click', runCalculator);
 function runCalculator(){
 let current;
 if(phase.value === '3 Phase' && type.value === 'kW'){
-  current = motorPowerRating.value / (voltage.value * 1.732 * motorPowerFactor.value)
+  current = (motorPowerRating.value) / (voltage.value * 1.732 * motorPowerFactor.value)
   current *= 1000;
-  motorOutput.innerHTML = 'Motor Current = ' + Math.floor(current) + ' A';
+  let newCurrent = current.toFixed(2);
+  motorOutput.innerHTML = 'Motor Current = ' + newCurrent + ' A';
 }else if(phase.value === '3 Phase' && type.value === 'hp'){
-    motorOutput.innerHTML = '2';
+    current = (motorPowerRating.value) / (voltage.value * 1.732 * motorPowerFactor.value * motorEfficieny.value)
+    current *= 746;
+    let newCurrent = current.toFixed(2);
+    motorOutput.innerHTML = 'Motor Current = ' + newCurrent + ' A';
 }else if(phase.value === '1 Phase' && type.value === 'kW'){
-    motorOutput.innerHTML = '3';
+    current = (motorPowerRating.value) / (voltage.value * motorPowerFactor.value)
+    current *= 1000;
+    let newCurrent = current.toFixed(2);
+    motorOutput.innerHTML = 'Motor Current = ' + newCurrent + ' A';
 }else if(phase.value === '1 Phase' && type.value === 'hp'){
-    motorOutput.innerHTML = '4';
+    current = (motorPowerRating.value) / (voltage.value * motorPowerFactor.value * motorEfficieny.value)
+    current *= 746;
+    let newCurrent = current.toFixed(2);
+    motorOutput.innerHTML = 'Motor Current = ' + newCurrent + ' A';
 }else{
     motorOutput.innerHTML = 'Invalid';
 }

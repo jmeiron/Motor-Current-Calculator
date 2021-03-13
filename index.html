@@ -9,42 +9,43 @@
     <div class="title">
         <h1>Motor Current Calculator</h1>
     </div>  
-    <div class='voltage input'>
+    <div class="inputs">
+    <div class='voltage-input'>
        <label>Voltage</label>
        <input id='voltage'type='number' maxlength="4" minlength="1" value="120" required> 
-    </div>     
-    <div class="phase input">
+     </div>     
+     <div class="phase-input">
       <label>Phase</label>
         <select id="phase">
           <option value="3 Phase">3 Phase</option>
           <option value="1 Phase">1 Phase</option>
         </select>
     </div>
-    <div class="MotorP input">
+    <div class="MPI">
        <label>Motor Power Rating</label>
-       <input id="motorPR" type='number' maxlength="3" minlength="1" value="100" required>
+       <input id="motorPR" type='number' maxlength="3" minlength="1" value="10" required>
        <select id="type">
          <option value="kW">kW</option>
          <option value="hp">hp</option>
        </select> 
     </div>   
-    <div class="MotorPF input">
+    <div class="MPFI">
       <label>Motor Power Factor</label>
       <input id="motorPF" type='number' minlength="1" maxlength="3" value="0.86">
     </div>  
-    <div class="MotorEff input">
+    <div class="MEI">
       <label>Motor Efficiency</label>
       <input id="motorE" type='number' minlength="1" minlength="3" value="0.95">
-    </div>  
+    </div> 
+    </div>
     <div class="button">
       <button id="calculate">
         Calculate
       </button>
     </div>
-    <div class="MotorCurrent OutPut">
+    <div class="MCP">
       <h2 id='motorOutput'>Motor Current = </h2>
     </div>
-
 
     <script src="main.js"></script> 
   </body>
